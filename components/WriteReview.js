@@ -4,6 +4,7 @@ import { ScrollView, Text, StyleSheet, TextInput } from 'react-native';
 const WriteReview = () => {
     const [firstName, onChangeFirstName] = useState('');
     const [lastName, onChangeLastName] = useState('');
+    const [review, onChangeReview] = useState('');
     
     return (
         <ScrollView style={styles.container}>
@@ -24,6 +25,13 @@ const WriteReview = () => {
                 value={lastName}
                 onChangeText={onChangeLastName}
                 placeholder={'Last Name'}
+            />
+            <TextInput
+                style={styles.reviewBox}
+                value={review}
+                onChangeText={onChangeReview}
+                placeholder={'Please write your review here...'}
+                multiline={true}
             />
         </ScrollView>
     );
@@ -55,6 +63,16 @@ const styles = StyleSheet.create({
         borderColor: '#EDEFEE',
         backgroundColor: '#EDEFEE',
     },
+    reviewBox: {
+        textAlignVertical: 'top',
+        height: 120,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+        fontSize: 16,
+        borderColor: '#EDEFEE',
+        backgroundColor: '#EDEFEE',
+    }
 });
 
 export default WriteReview;
