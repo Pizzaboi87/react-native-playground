@@ -1,5 +1,4 @@
 import 'react-native-gesture-handler';
-import { StyleSheet } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import MenuItems from './MenuItems';
 import WriteReview from './WriteReview';
@@ -19,11 +18,5 @@ const MainScreen = () => {
         </Drawer.Navigator>
     );
 }
-
-const styles = StyleSheet.create({
-    menuStyle: {
-        backgroundColor: 'red',
-    },
-});
 
 export default MainScreen;
