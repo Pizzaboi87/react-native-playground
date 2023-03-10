@@ -5,10 +5,9 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import MenuItems from './components/MenuItems';
-import WriteReview from './components/WriteReview';
 import WelcomeScreen from './components/WelcomeScreen';
 import LoginScreen from './components/LoginScreen';
+import MainScreen from './components/MainScreen';
 
 export default function App() {
 
@@ -22,10 +21,10 @@ export default function App() {
           <Stack.Navigator
             initialRouteName="Home"
             style={styles.footerContainer}
-            screenOptions={{ headerStyle: { backgroundColor: '#FBDABB' } }}>
+            screenOptions={{ headerShown: false }}>
               <Stack.Screen name="Home" component={WelcomeScreen} />
               <Stack.Screen name="LoginScreen" component={LoginScreen} />
-              <Stack.Screen name="Menu" component={MenuItems} />
+              <Stack.Screen name="Main" component={MainScreen} />
           </Stack.Navigator>
         </View>
         <View style={styles.footerContainer}>

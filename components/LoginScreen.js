@@ -31,7 +31,7 @@ const LoginScreen = ({ navigation }) => {
         secureTextEntry={true}
       />
       <Pressable
-        onPress={() => navigation.navigate('Menu')}
+        onPress={() => navigation.navigate('Main')}
         style={styles.button}>
         <Text style={styles.buttonText}>Log in</Text>
       </Pressable>
